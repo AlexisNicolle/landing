@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Les Délices d'Eden</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style pour la bannière avec image de fond */
+        .banner {
+            background-image: url(Images/pain.webp); /* Chemin vers votre image de fond */
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Style pour la section du header dans la bannière */
+        .banner-header {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .banner-header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+
+        /* Style pour le bouton */
+        .button {
+            background-color: #ffd700;
+            color: #ffffff;
+            padding: 15px 30px;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Style pour le contenu */
+        .content {
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* Style pour la section Qui sommes nous */
+        .about-section {
+            background-color: #f9f9f9;
+            padding: 50px;
+            text-align: center; /* Centrer le texte */
+        }
+
+        /* Style pour les images des dirigeants */
+        .founders {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .founder {
+            margin: 0 20px;
+            text-align: center; /* Centrer le texte */
+        }
+
+        .founder img {
+            max-width: 100px; /* Réduire la taille des images */
+            height: auto; /* Hauteur automatique */
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        /* Style pour le nom et le poste des dirigeants */
+        .founder p {
+            margin: 0; /* Supprimer les marges par défaut */
+            font-size: 14px; /* Taille du texte */
+            font-family: Lora, serif; /* Changer la police */
+            font-weight: bold; /* Mettre en gras */
+        }
+
+        /* Style pour le bas de page */
+        .footer {
+            background-color: #c8b7a0; /* Couleur de fond */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #fff; /* Couleur des liens dans le pied de page */
+            text-decoration: none; /* Supprimer le soulignement des liens */
+            margin: 0 10px; /* Marge autour des liens */
+        }
+
+        .footer p {
+            font-family: Lora, serif; /* Changer la police */
+            font-size: 14px; /* Réduire la taille de la police */
+            font-weight: bold; /* Mettre en gras */
+            margin-bottom: 5px; /* Espacement en bas */
+        }
+
+        /* Style pour les produits déroulants */
+        .products-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .products-carousel {
+            display: flex;
+            overflow-x: auto; /* Permettre le défilement horizontal */
+            scroll-snap-type: x mandatory; /* Défilement fluide */
+            -webkit-overflow-scrolling: touch; /* Permettre le défilement tactile sur iOS */
+        }
+
+        .product {
+            flex: 0 0 auto; /* Taille fixe pour chaque produit */
+            margin-right: 20px; /* Espacement entre les produits */
+            scroll-snap-align: start; /* Alignement des produits lors du défilement */
+            border: 1px solid #ccc; /* Ajouter une bordure autour des produits */
+            border-radius: 5px; /* Ajouter un peu de bord arrondi */
+            padding: 20px; /* Ajouter un peu de rembourrage à l'intérieur des produits */
+        }
+
+        .product img {
+            width: 200px; /* Taille des images */
+            height: 200px; /* Taille des images */
+            border-radius: 5px;
+            object-fit: cover; /* Ajuster l'image à la taille spécifiée */
+        }
+
+        /* Style pour la newsletter */
+        .newsletter-section {
+            text-align: center;
+            margin-bottom: 50px; /* Ajouter de l'espace en dessous */
+        }
+
+        .newsletter-section h2 {
+            margin-bottom: 20px; /* Ajouter de l'espace en dessous */
+        }
+
+        .newsletter-section form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .newsletter-section input[type="email"],
+        .newsletter-section button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        .newsletter-section input[type="email"] {
+            flex: 1; /* Permettre à l'entrée de s'étendre pour remplir l'espace disponible */
+        }
+
+        .newsletter-section button {
+            background-color: #ffd700;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bannière -->
+    <div class="banner">
+        <div class="banner-header">
+            <a href="#">Produits</a>
+            <a href="#">Support</a>
+            <a href="#">Compte</a>
+        </div>
+        <a href="page-produit.html" class="button">Goûter nos produits</a> <!-- Lier à la page produit -->
+    </div>
+
+    <!-- Contenu -->
+    <div class="content">
+        <h1>Les Délices d'Eden</h1>
+        <p>Découvrez un univers de délices sucrés</p>
+    </div>
+
+    <!-- Section Qui sommes nous -->
+    <div class="about-section">
+        <h2>Qui sommes nous ?</h2>
+        <p>Dans notre jardin gourmand, chaque création est une histoire d'amour entre les saveurs exquises et le savoir-faire artisanal. Inspirés par la fraîcheur des ingrédients et la passion pour la pâtisserie, nous vous invitons à découvrir un univers où chaque bouchée est un voyage de délice. Plongez dans notre monde sucré et laissez-vous emporter par les sensations uniques de nos créations faites maison, confectionnées avec soin et créativité. Bienvenue dans le jardin gourmand, où chaque instant est une invitation à savourer la vie.</p>
+    </div>
+
+    <!-- Section Photos des dirigeants -->
+    <div class="founders">
+        <div class="founder">
+            <p>Alexis Nicolle</p>
+            <img src="Images/pdp.JPG" alt="Nicolle Alexis">
+            <p>CEO</p>
+        </div>
+        <div class="founder">
+            <p>Linda Dufour</p>
+            <img src="Images/linda.jpg" alt="Linda">
+            <p>Directrice Logistique</p>
+        </div>
+        <div class="founder">
+            <p>Thomas Lanvin</p>
+            <img src="Images/Thomas.JPG" alt="Thomas">
+            <p>Directeur Financier</p>
+        </div>
+        <div class="founder">
+            <p>Valérie Proux</p>
+            <img src="Images/Valérie.jpg" alt="Valérie">
+            <p>Directrice Marketing</p>
+        </div>
+    </div>
+
+    <!-- Section Produits déroulants -->
+    <div class="products-section">
+        <h2>Nos Produits</h2>
+        <div class="products-carousel">
+            <div class="product">
+                <img src="Images/croissant.jpg" alt="Produit 1">
+                <h3>Croissant</h3>
+                <p>Description du produit 1</p>
+            </div>
+            <div class="product">
+                <img src="Images/paincho.png" alt="Produit 2">
+                <h3>Pain au chocolat</h3>
+                <p>Description du produit 2</p>
+            </div>
+            <div class="product">
+                <img src="Images/painrai.jpg" alt="Produit 3">
+                <h3>Pain au raisin</h3>
+                <p>Description du produit 3</p>
+            </div>
+            <!-- Ajoutez autant de produits que nécessaire -->
+        </div>
+    </div>
+
+    <!-- Section Newsletter -->
+    <div class="newsletter-section">
+        <h2>Inscrivez-vous à notre Newsletter</h2>
+        <form action="#" method="post">
+            <input type="email" name="email" placeholder="Entrez votre adresse e-mail" required>
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+
+    <!-- Bas de page -->
+    <div class="footer">
+        <p><a href="mention-legales.html">Mentions Légales</a> | 
+        <a href="politique-de-confidentialite.html">Politique de confidentialité</a> | 
+        <a href="conditions-generales.html">Conditions Générales d'Utilisation</a> | 
+        <a href="plan-du-site.html">Plan du site</a> | 
+        <a href="contact.html">Contact</a></p>
+        <p>© 2024 Les Délices d'Eden. Tous droits réservés.</p>
+    </div>
+
+</body>
+</html>
